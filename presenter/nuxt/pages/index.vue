@@ -81,6 +81,8 @@
 </template>
 
 <script>
+// TODO: パスをスッキリさせたい
+import { Film } from '../../../domain/Film/Film.ts'
 import Logo from '~/components/Logo.vue'
 import VuetifyLogo from '~/components/VuetifyLogo.vue'
 
@@ -88,6 +90,9 @@ export default {
   components: {
     Logo,
     VuetifyLogo,
+  },
+  mounted() {
+    console.log('hoge', Film)
   },
 }
 </script>
