@@ -14,5 +14,6 @@ module.exports = {
   rules: {
     'no-console': 'off',
     'prettier/prettier': ['error', { printWidth: 120 }],
+    camelcase: 'off',
   },
 }
