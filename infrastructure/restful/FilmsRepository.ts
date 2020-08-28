@@ -2,7 +2,7 @@ import { AxiosResponse } from 'axios'
 import axios from './axiosConfig'
 import { Films } from '@/domain/Film/Films'
 
-interface IFilmsRepository {
+export interface IFilmsRepository {
   getAll(): Promise<Films>
 }
 

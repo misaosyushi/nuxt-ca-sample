@@ -58,14 +58,19 @@
 import Logo from '@/components/Logo.vue'
 import VuetifyLogo from '@/components/VuetifyLogo.vue'
 import { Film } from '../../../domain/Film/Film.ts'
+import { FilmsUseCase } from '../../../usecase/FilmsUseCase'
+import { FilmsRepository } from '../../../infrastructure/restful/FilmsRepository'
 
 export default {
   components: {
     Logo,
     VuetifyLogo,
   },
-  mounted() {
+  async mounted() {
+    const usecase = new FilmsUseCase(new FilmsRepository)
+    const res = await usecase.getAll()
     console.log('hoge', Film)
+    console.log('fuga', res.results)
   },
 }
 </script>
